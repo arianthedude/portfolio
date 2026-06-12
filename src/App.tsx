@@ -1,37 +1,43 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+import { useState } from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
+import { Briefcase, Code, Mail, User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-import { useState } from 'react';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
-import Footer from './components/Footer';
-import { portfolioData } from './data';
-import { Briefcase, Code, Mail, User } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import type {
+  Education,
+  Language,
+  ExperienceItem,
+  ProjectItem,
+  ContactInfo,
+} from "./types";
 
 export default function App() {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+  const { t } = useTranslation();
+
+  // SAFE ARRAY EXTRACTION (this prevents .map crashes)
+  const expertise = (t("expertise", { returnObjects: true }) ?? []) as string[];
+  const languages = (t("languages", { returnObjects: true }) ?? []) as Language[];
+  const education = (t("education", { returnObjects: true }) ?? []) as Education[];
+  const experience = (t("experience", { returnObjects: true }) ?? []) as ExperienceItem[];
+  const projects = (t("projects", { returnObjects: true }) ?? []) as ProjectItem[];
+
+  const contact = (t("contact", { returnObjects: true }) ?? {}) as ContactInfo;
 
   const handleScrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      if (sectionId === 'contact') {
-        // If "contact" is requested, scroll to sidebar contact region
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Highlight it briefly for context
-          contactSection.classList.add('ring-2', 'ring-[#4b41e1]/30', 'rounded-md');
-          setTimeout(() => {
-            contactSection.classList.remove('ring-2', 'ring-[#4b41e1]/30', 'rounded-md');
-          }, 2000);
-          return;
-        }
-      }
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!element) return;
+
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (sectionId === "contact") {
+      element.classList.add("ring-2", "ring-[#4b41e1]/30", "rounded-md");
+      setTimeout(() => {
+        element.classList.remove("ring-2", "ring-[#4b41e1]/30", "rounded-md");
+      }, 2000);
     }
   };
 
@@ -40,76 +46,52 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col mt-10 bg-[#f7f9fb] text-[#191c1e] antialiased selection:bg-[#e2dfff] selection:text-[#4b41e1]">
-      {/* Scrollable contents anchor at top */}
+    <div className="min-h-screen flex flex-col mt-10 bg-[#f7f9fb] text-[#191c1e] antialiased">
       <Header
-        name={portfolioData.name}
-        avatarUrl={portfolioData.avatarUrl}
+        name={t("name")}
+        title={t("title")}
+        avatarUrl="/assets/img.jpeg"
         onScrollToSection={handleScrollToSection}
         onPrintResume={handlePrintResume}
       />
 
-      {/* Main Resume Container */}
-      <main className="w-full max-w-[850px] mx-auto mt-16 flex flex-col md:flex-row min-h-screen border-x border-[#e0e3e5] bg-white shadow-sm mb-16 md:mb-0 print:border-none print:mt-0 print:mb-0 print:shadow-none print:bg-white">
-        {/* Left Sidebar (30% width) */}
+      <main className="w-full max-w-[850px] mx-auto mt-16 flex flex-col md:flex-row min-h-screen border-x border-[#e0e3e5] bg-white">
         <Sidebar
-          contact={portfolioData.contact}
-          expertise={portfolioData.expertise}
+          contact={contact}
+          expertise={expertise}
           selectedSkill={selectedSkill}
           onSelectSkill={setSelectedSkill}
-          languages={portfolioData.languages}
-          education={portfolioData.education}
+          languages={languages}
+          education={education}
         />
 
-        {/* Right Main Details (70% width) */}
         <MainContent
-          professionalSummary={portfolioData.professionalSummary}
-          experience={portfolioData.experience}
-          projects={portfolioData.projects}
+          professionalSummary={t("professionalSummary")}
+          experience={experience}
+          projects={projects}
           selectedSkill={selectedSkill}
         />
       </main>
 
-      {/* Footer Details */}
       <Footer
-        github={portfolioData.contact.github}
-        website={portfolioData.contact.website}
-        name={portfolioData.name}
-        title={portfolioData.title}
+        github={contact.github}
+        website={contact.website}
+        name={t("name")}
+        title={t("title")}
       />
 
-      {/* Mobile Sticky Bottom Tab Bar */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full z-40 flex justify-around items-center h-16 px-4 bg-white/95 backdrop-blur-md border-t border-[#e0e3e5] shadow-lg print:hidden">
-        <button
-          onClick={() => handleScrollToSection('summary')}
-          className="flex flex-col items-center justify-center text-[#45474c] hover:text-[#4b41e1] active:scale-95 transition-all cursor-pointer"
-        >
-          <User size={20} />
-          <span className="font-mono text-[9px] font-bold mt-1">Summary</span>
+      <nav className="md:hidden fixed bottom-0 left-0 w-full z-40 flex justify-around items-center h-16 bg-white border-t">
+        <button onClick={() => handleScrollToSection("summary")}>
+          <User />
         </button>
-
-        <button
-          onClick={() => handleScrollToSection('experience')}
-          className="flex flex-col items-center justify-center text-[#45474c] hover:text-[#4b41e1] active:scale-95 transition-all cursor-pointer"
-        >
-          <Briefcase size={20} />
-          <span className="font-mono text-[9px] font-bold mt-1">Experience</span>
+        <button onClick={() => handleScrollToSection("experience")}>
+          <Briefcase />
         </button>
-
-        <button
-          onClick={() => handleScrollToSection('projects')}
-          className="flex flex-col items-center justify-center text-[#45474c] hover:text-[#4b41e1] active:scale-95 transition-all cursor-pointer"
-        >
-          <Code size={20} />
-          <span className="font-mono text-[9px] font-bold mt-1">Projects</span>
+        <button onClick={() => handleScrollToSection("projects")}>
+          <Code />
         </button>
-
-        <button
-          onClick={() => handleScrollToSection('contact')}
-          className="flex flex-col items-center justify-center text-[#45474c] hover:text-[#4b41e1] active:scale-95 transition-all cursor-pointer"
-        >
-          <Mail size={20} />
-          <span className="font-mono text-[9px] font-bold mt-1">Contact</span>
+        <button onClick={() => handleScrollToSection("contact")}>
+          <Mail />
         </button>
       </nav>
     </div>
