@@ -18,6 +18,7 @@ import type {
 export default function App() {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
   const { t } = useTranslation();
+  const isRTL = document.documentElement.dir === "rtl";
 
   // SAFE ARRAY EXTRACTION (this prevents .map crashes)
   const expertise = (t("expertise", { returnObjects: true }) ?? []) as string[];
@@ -102,7 +103,9 @@ export default function App() {
       <div className="overflow-hidden w-full">
         <motion.div
           className="flex whitespace-nowrap"
-          animate={{ x: ["0%", "100%"] }}
+          animate={{
+            x: isRTL ? ["0%", "100%"] : ["0%", "-100%"],
+          }}
           transition={{
             duration: 60,
 
@@ -112,20 +115,11 @@ export default function App() {
           }}
         >
           <div className="flex shrink-0 bg-amber-300 py-5">
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
-
-            <span className="mx-4">{t("footer.notice")}</span>
+            {Array.from({ length: 8 }).map((_, index) => (
+              <span key={index} className="mx-4">
+                {t("footer.notice")}
+              </span>
+            ))}
           </div>
         </motion.div>
       </div>
