@@ -5,6 +5,7 @@ import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import { Briefcase, Code, Mail, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 import type {
   Education,
@@ -20,10 +21,14 @@ export default function App() {
 
   // SAFE ARRAY EXTRACTION (this prevents .map crashes)
   const expertise = (t("expertise", { returnObjects: true }) ?? []) as string[];
-  const languages = (t("languages", { returnObjects: true }) ?? []) as Language[];
-  const education = (t("education", { returnObjects: true }) ?? []) as Education[];
-  const experience = (t("experience", { returnObjects: true }) ?? []) as ExperienceItem[];
-  const projects = (t("projects", { returnObjects: true }) ?? []) as ProjectItem[];
+  const languages = (t("languages", { returnObjects: true }) ??
+    []) as Language[];
+  const education = (t("education", { returnObjects: true }) ??
+    []) as Education[];
+  const experience = (t("experience", { returnObjects: true }) ??
+    []) as ExperienceItem[];
+  const projects = (t("projects", { returnObjects: true }) ??
+    []) as ProjectItem[];
 
   const contact = (t("contact", { returnObjects: true }) ?? {}) as ContactInfo;
 
@@ -94,6 +99,36 @@ export default function App() {
           <Mail />
         </button>
       </nav>
+      <div className="overflow-hidden w-full">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: ["0%", "100%"] }}
+          transition={{
+            duration: 60,
+
+            ease: "linear",
+
+            repeat: Infinity,
+          }}
+        >
+          <div className="flex shrink-0 bg-amber-300 py-5">
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+
+            <span className="mx-4">{t("footer.notice")}</span>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }

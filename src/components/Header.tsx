@@ -20,10 +20,10 @@ export default function Header({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: "summary", name: "Summary" },
-    { id: "experience", name: "Experience" },
-    { id: "projects", name: "Projects" },
-    { id: "contact", name: "Contact" },
+    { id: "summary", name: "summary" },
+    { id: "experience", name: "experience" },
+    { id: "projects", name: "projects" },
+    { id: "contact", name: "contact" },
   ];
   const { i18n, t } = useTranslation();
 
@@ -31,6 +31,11 @@ export default function Header({
     setActiveSection(sectionId);
     onScrollToSection(sectionId);
     setMobileMenuOpen(false);
+  };
+
+  const changeLanguage = (lang: string) => {
+    localStorage.setItem("language", lang);
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -64,7 +69,7 @@ export default function Header({
                   : "text-[#45474c] hover:text-[#4b41e1]"
               }`}
             >
-              {item.name}
+              {t(`nav.${item.name}`)}
               {activeSection === item.id && (
                 <motion.div
                   layoutId="activeIndicator"
@@ -82,11 +87,31 @@ export default function Header({
             <FileText size={20} />
           </button>
           <div className="group">
-            <img src="/assets/language.svg"  alt="" className="w-5 cursor-pointer" />
-            <div className="hidden absolute top-14   bg-gray-200 z-10  group-hover:flex flex-col rounded-lg ">
-              <button className="hover:bg-gray-300 p-2 rounded-lg" onClick={() => i18n.changeLanguage("en")}>{t('language.english')}</button>
+            <img
+              src="/assets/language.svg"
+              alt=""
+              className="w-5 cursor-pointer"
+            />
+            <div className="hidden absolute top-14    bg-gray-200 z-10  group-hover:flex flex-col rounded-lg ">
+              <button
+                className="hover:bg-gray-300 p-2 uppercase rounded-lg cursor-pointer"
+                onClick={() => changeLanguage("en")}
+              >
+                {t("language.english")}
+              </button>
 
-              <button className="hover:bg-gray-300 p-2 rounded-lg" onClick={() => i18n.changeLanguage("fa")}>{t('language.persian')}</button>
+              <button
+                className="hover:bg-gray-300 p-2 uppercase rounded-lg cursor-pointer"
+                onClick={() => changeLanguage("fa")}
+              >
+                {t("language.persian")}
+              </button>
+              <button
+                className="hover:bg-gray-300 p-2 uppercase rounded-lg cursor-pointer"
+                onClick={() => changeLanguage("de")}
+              >
+                {t("language.deutsch")}
+              </button>
             </div>
           </div>
         </nav>

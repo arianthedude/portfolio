@@ -1,0 +1,162 @@
+{
+  "name": "Arian Jamali",
+  "title": "Full-Stack-Entwickler",
+  "professionalSummary": "Full-Stack-Entwickler mit über 4 Jahren Berufserfahrung in der Konzeption, Entwicklung, Bereitstellung und Wartung von Webanwendungen. Versiert in JavaScript, TypeScript, React, Vue.js, Node.js, PostgreSQL und Linux, mit Erfahrung in der UI-Entwicklung, API-Design und -Implementierung, Datenbankverwaltung und Bereitstellung in Produktionsumgebungen. Über 10 freiberufliche Projekte von der Anforderungsanalyse über die Entwicklung, Bereitstellung und Betreuung abgeschlossen, mit direkter Zusammenarbeit mit Kunden und technischen Teams. Leidenschaftlich interessiert an der Entwicklung von End-to-End-Lösungen und dem Erlernen neuer Technologien im gesamten Softwareentwicklungslebenszyklus.",
+
+  "contact": {
+    "email": "arianthedude@gmail.com",
+    "location": "Teheran, Iran",
+    "github": "github.com/arianthedude",
+    "website": "arianthedude.ir",
+    "phone": "09932868312"
+  },
+  "nav": {
+    "contact": "Kontakt",
+    "summary": "Zusammenfassung",
+    "experience": "Berufserfahrung",
+    "projects": "Projekte"
+  },
+  "sidebar": {
+    "contact": "Kontakt",
+    "expertise": "Expertise",
+    "languages": "Sprachen",
+    "education": "Ausbildung"
+  },
+
+  "expertise": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Nuxt.js",
+    "Node.js",
+    "Express.js",
+    "NestJS",
+    "PostgreSQL",
+    "Python",
+    "Redis",
+    "Docker",
+    "Linux",
+    "Git",
+    "GitHub",
+    "Tailwind CSS",
+    "REST-API-Entwicklung",
+    "Browser-Automatisierung",
+    "Technischer Support",
+    "Fehlerbehebung"
+  ],
+  "Professional_Summary": "Berufliche Zusammenfassung",
+  "Experience": "Berufserfahrung",
+  "Featured_Projects": "Ausgewählte Projekte",
+  "languages": [
+    {
+      "name": "Persisch",
+      "level": "MUTTERSPRACHE"
+    },
+    {
+      "name": "Englisch",
+      "level": "VERHANDLUNGSSICHER"
+    },
+    {
+      "name": "Deutsch",
+      "level": "GRUNDKENNTNISSE"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Abitur in Mathematik und Physik",
+      "school": "Khatam Gymnasium",
+      "period": "2009 — 2013"
+    }
+  ],
+
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Full-Stack-Entwickler & Technischer Support-Spezialist",
+      "company": "Pejvak Information Pars",
+      "location": "Teheran, Iran",
+      "period": "2022 — 2025",
+      "bullets": [
+        "Wartung und Support von über 30 Websites und Unternehmensanwendungen für Kunden aus verschiedenen Branchen.",
+        "Diagnose und Behebung von über 100 technischen Problemen im Zusammenhang mit Hosting, Bereitstellung und Anwendungsinfrastruktur.",
+        "Zusammenarbeit mit Entwicklern, Designern und Stakeholdern zur Implementierung neuer Funktionen, Behebung von Fehlern und Verbesserung der Plattform.",
+        "Verwaltung von Produktionsbereitstellungen, Website-Updates und laufenden Wartungsaktivitäten zur Sicherstellung der Systemstabilität.",
+        "Technischer Support für über 50 Kunden mit Steigerung der Kundenzufriedenheit durch schnelle Reaktionszeiten.",
+        "Unterstützung bei Tests und Fehlerbehebung von Webanwendungen in Linux-Produktionsumgebungen."
+      ],
+      "tags": ["JavaScript", "React", "Linux", "Git", "Technischer Support"]
+    },
+    {
+      "id": "exp-2",
+      "role": "Freiberuflicher Webentwickler",
+      "company": "Selbstständig",
+      "location": "Remote",
+      "period": "2019 — Heute",
+      "bullets": [
+        "Lieferung von über 20 Webentwicklungsprojekten mit React, Vue.js, Nuxt.js und Node.js.",
+        "Entwicklung responsiver Benutzeroberflächen und wiederverwendbarer Komponenten zur Steigerung der Entwicklungsgeschwindigkeit und Wartbarkeit.",
+        "Erstellung und Integration von REST-APIs mit Node.js und Express.js zur Unterstützung von Geschäftsprozessen.",
+        "Verwaltung von Linux-basierten Bereitstellungen, Aktualisierung von Anwendungen und Wartung aktiver Projekte.",
+        "Direkte Zusammenarbeit mit über 10 Stammkunden zur Erfassung von Anforderungen und Lieferung maßgeschneiderter Lösungen.",
+        "Langfristiger Support und Fehlerbehebung für Kunden-Websites, Anwendungen und Backend-Systeme."
+      ],
+      "tags": ["React", "Vue.js", "Nuxt.js", "Node.js", "PostgreSQL"]
+    },
+    {
+      "id": "exp-3",
+      "role": "Kundenservice-Spezialist",
+      "company": "Cafe",
+      "location": "Teheran, Iran",
+      "period": "2018 — 2019",
+      "bullets": [
+        "Betreuung von über 100 Kunden pro Woche in einem schnelllebigen Umfeld bei gleichbleibend hoher Kundenzufriedenheit.",
+        "Verwaltung von Bestellungen, Zahlungen und Kundeninteraktionen während der Stoßzeiten.",
+        "Zusammenarbeit mit Teammitgliedern zur Gewährleistung eines reibungslosen Tagesgeschäfts und effektiver Servicebereitstellung.",
+        "Entwicklung von Kommunikations-, Teamarbeits- und Problemlösungsfähigkeiten durch direkte Kundenbetreuung."
+      ],
+      "tags": ["Kundenservice", "Kommunikation", "Teamarbeit"]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Kampagnen-Management-Dashboard",
+      "description": "Entwicklung eines Management-Dashboards mit React, TypeScript und TanStack Table mit erweiterten Filtermöglichkeiten, Sortierung, Inline-Bearbeitung und API-Integration.",
+      "link": "https://github.com/arianthedude",
+      "tags": ["React", "TypeScript", "TanStack Table", "REST-API"]
+    },
+    {
+      "id": "proj-2",
+      "title": "Benutzerverwaltungsplattform",
+      "description": "Entwicklung von Benutzerprofilverwaltungsfunktionen, rollenbasierter Zugriffskontrolle und Verwaltungstools mit Anbindung an API und PostgreSQL-Datenbank.",
+      "link": "https://github.com/arianthedude",
+      "tags": ["React", "Node.js", "PostgreSQL"]
+    },
+    {
+      "id": "proj-3",
+      "title": "Browser-Automatisierungstools",
+      "description": "Entwicklung von Browser-Automatisierungsworkflows mit Playwright und Node.js für Datenextraktion, Formularübermittlung und wiederkehrende Webprozesse.",
+      "link": "https://github.com/arianthedude/spotify-convert",
+      "tags": ["Node.js", "Playwright", "Automatisierung"]
+    },
+    {
+      "id": "proj-4",
+      "title": "Profilverwaltungs-Dashboard",
+      "description": "Entwicklung eines Benutzerprofilverwaltungssystems mit bearbeitbaren Tabellen, dynamischen Formularen und rollenbasierter Zugriffskontrolle mit React und Tailwind CSS.",
+      "link": "https://github.com/arianthedude/",
+      "tags": ["React", "Tailwind CSS", "TypeScript"]
+    }
+  ],
+  "footer": {
+    "notice": "Dieser Lebenslauf wurde automatisch von einem System-Bot übermittelt. Daher wurde die Stellenbewerbung oder Stellenbeschreibung möglicherweise nicht direkt vom Bewerber geprüft."
+  },
+  "language": {
+    "persian": "Persisch",
+    "english": "Englisch",
+    "deutsch": "Deutsch"
+  }
+}

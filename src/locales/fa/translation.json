@@ -1,13 +1,26 @@
 {
-  "name": "آریان جمالی",
-  "title": "توسعه‌دهنده فرانت‌اند",
-  "professionalSummary": "توسعه‌دهنده فرانت‌اند با بیش از ۲ سال تجربه حرفه‌ای در ساخت اپلیکیشن‌های وب مدرن با استفاده از React، Vue.js، Nuxt.js، JavaScript و TypeScript. دارای تجربه در توسعه رابط‌های کاربری واکنش‌گرا، REST API با Node.js، دیتابیس PostgreSQL و استقرار بر پایه لینوکس. بیش از ۲۰ پروژه فریلنسری تحویل داده و به‌صورت مستقیم با مشتریان برای توسعه، نگهداری و پشتیبانی اپلیکیشن‌های وب در محیط پروداکشن همکاری داشته است.",
+  "name": "آرین جمالی",
+  "title": "توسعه‌دهنده فول استک",
+  "professionalSummary": "توسعه‌دهنده فول‌استک با بیش از ۴ سال تجربه حرفه‌ای در طراحی، توسعه، استقرار و نگهداری اپلیکیشن‌های وب. مسلط به JavaScript، TypeScript، React، Vue.js، Node.js، PostgreSQL و Linux و دارای تجربه در توسعه رابط کاربری، طراحی و پیاده‌سازی API، مدیریت دیتابیس و استقرار در محیط‌های پروداکشن. بیش از ۱۰ پروژه فریلنسری را از مرحله تحلیل نیازمندی‌ها تا توسعه، استقرار و پشتیبانی تحویل داده و به‌صورت مستقیم با مشتریان و تیم‌های فنی همکاری کرده است. علاقه‌مند به ساخت راهکارهای انتها به انتها (End-to-End) و یادگیری فناوری‌های جدید در سراسر چرخه توسعه نرم‌افزار.",
 
   "contact": {
     "email": "arianthedude@gmail.com",
     "location": "تهران، ایران",
     "github": "github.com/arianthedude",
-    "website": "https://your-portfolio.com"
+    "website": "arianthedude.ir",
+    "phone": "09932868312"
+  },
+  "nav": {
+    "contact": "اطلاعات تماس",
+    "summary": "خلاصه",
+    "experience": "تجربه",
+    "projects": "پروژه ها"
+  },
+  "sidebar": {
+    "contact": "اطلاعات تماس",
+    "expertise": "تخصص",
+    "languages": "زبان ها",
+    "education": "تحصیلات"
   },
 
   "expertise": [
@@ -21,6 +34,7 @@
     "Express.js",
     "NestJS",
     "PostgreSQL",
+    "Python",
     "Redis",
     "Docker",
     "Linux",
@@ -61,7 +75,7 @@
   "experience": [
     {
       "id": "exp-1",
-      "role": "توسعه‌دهنده فرانت‌اند و متخصص پشتیبانی فنی",
+      "role": "توسعه‌دهنده فول استک و متخصص پشتیبانی فنی",
       "company": "پژواک اطلاعات پارس",
       "location": "تهران، ایران",
       "period": "2022 — 2025",
@@ -112,34 +126,37 @@
       "id": "proj-1",
       "title": "داشبورد مدیریت کمپین",
       "description": "ساخت یک داشبورد مدیریتی با React، TypeScript و TanStack Table شامل فیلتر پیشرفته، مرتب‌سازی، ویرایش درون‌خطی و یکپارچه‌سازی API.",
-      "link": "",
+      "link": "https://github.com/arianthedude",
       "tags": ["React", "TypeScript", "TanStack Table", "REST API"]
     },
     {
       "id": "proj-2",
       "title": "پلتفرم مدیریت کاربران",
       "description": "توسعه قابلیت مدیریت پروفایل کاربران، کنترل دسترسی مبتنی بر نقش و ابزارهای مدیریتی متصل به API و دیتابیس PostgreSQL.",
-      "link": "",
+      "link": "https://github.com/arianthedude",
       "tags": ["React", "Node.js", "PostgreSQL"]
     },
     {
       "id": "proj-3",
       "title": "ابزارهای اتوماسیون مرورگر",
       "description": "ساخت ورک‌فلوهای اتوماسیون مرورگر با Playwright و Node.js برای استخراج داده، ارسال فرم و فرآیندهای تکراری وب.",
-      "link": "",
+      "link": "https://github.com/arianthedude/spotify-convert",
       "tags": ["Node.js", "Playwright", "اتوماسیون"]
     },
     {
       "id": "proj-4",
       "title": "داشبورد مدیریت پروفایل",
       "description": "ساخت سیستم مدیریت پروفایل کاربران با جدول‌های قابل ویرایش، فرم‌های داینامیک و دسترسی مبتنی بر نقش با استفاده از React و Tailwind CSS.",
-      "link": "",
+      "link": "https://github.com/arianthedude/",
       "tags": ["React", "Tailwind CSS", "TypeScript"]
     }
   ],
-
+  "footer": {
+    "notice": "این رزومه به‌صورت خودکار توسط ربات سیستم ارسال شده است. در نتیجه ممکن است درخواست استخدام یا شرح موقعیت شغلی به‌صورت مستقیم توسط متقاضی بررسی نشده باشد."
+  },
   "language": {
     "persian": "فارسی",
-    "english": "انگلیسی"
+    "english": "english",
+    "deutsch": "deutsch"
   }
 }
