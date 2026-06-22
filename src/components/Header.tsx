@@ -88,7 +88,7 @@ export default function Header({
           </button>
           <div className="group">
             <img
-              src="/assets/language.svg"
+              src="/language.svg"
               alt=""
               className="w-5 cursor-pointer"
             />
