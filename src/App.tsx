@@ -56,7 +56,7 @@ export default function App() {
       <Header
         name={t("name")}
         title={t("title")}
-        avatarUrl="./assets/img.jpeg"
+        avatarUrl="/img.jpeg"
         onScrollToSection={handleScrollToSection}
         onPrintResume={handlePrintResume}
       />
